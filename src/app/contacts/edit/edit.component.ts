@@ -65,6 +65,8 @@ export class EditComponent implements OnInit {
     };
 
     this.contactService.EditContact(updatedContact, this.contactId);
+    this.contactForm.reset();
     this.router.navigate(['/contacts']); 
+    
   }
 }
