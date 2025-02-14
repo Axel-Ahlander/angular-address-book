@@ -6,11 +6,12 @@ import { AddComponent } from './add/add.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { ViewComponent } from './view/view.component';
+import { EditComponent } from './edit/edit.component';
 
 
 
 @NgModule({
-  declarations: [ListComponent, AddComponent, ViewComponent],
+  declarations: [ListComponent, AddComponent, ViewComponent, EditComponent],
   imports: [
     CommonModule,
     ReactiveFormsModule,
@@ -20,6 +21,7 @@ import { ViewComponent } from './view/view.component';
     ListComponent,
     AddComponent,
     ViewComponent,
+    EditComponent,
   ]
 })
 export class ContactsModule { }

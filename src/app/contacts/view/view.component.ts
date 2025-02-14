@@ -20,7 +20,7 @@ export class ViewComponent implements OnInit {
 
   ngOnInit(): void {
     this.contactId = Number(this.route.snapshot.paramMap.get('id'));
-    this.contactService.GetContacTById(this.contactId).subscribe((data) => {
+    this.contactService.GetContactById(this.contactId).subscribe((data) => {
       this.contact = data!;
     });
   }

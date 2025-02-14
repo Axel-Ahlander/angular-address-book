@@ -14,8 +14,17 @@ export class ContactsService {
     this.contacts.push(contact);
   }
 
-  GetContacTById(id: number): Observable<Contact | undefined> {
+  GetContactById(id: number): Observable<Contact | undefined> {
     const contact = this.contacts.find((b) => b.id === id);
     return of(contact);
   }
+
+  public EditContact(contact: Contact, id: number): void {
+    const index = this.contacts.findIndex(x => x.id === id);
+    if (index !== -1) {
+      this.contacts[index] = contact; 
+    }
+  }
+  
+
 }
